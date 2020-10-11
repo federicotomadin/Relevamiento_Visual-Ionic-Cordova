@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+        style="font-family: Arial, Helvetica, sans-serif;"
+        defaultHref="/"
+        text="Regresar"
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+      </ion-buttons>
+      <ion-title class="tituloHeader">
+      Prueba
+         <ion-icon class="ionIcon" src="./assets/sign-out-alt-solid.svg" (click)="salir()"></ion-icon>
+       </ion-title>
+    </ion-toolbar>
+  </ion-header> 
+  
+<ion-content>
+    <ion-spinner name="lines" *ngIf="mostrar" class="unSpinner"></ion-spinner>
+  <button class="btnPrincipal colorAdmin" id="1" (click)="Ingresar($event)">Admin</button>
+
+  <button class="btnPrincipal colorInvitado" id="2" (click)="Ingresar($event)">Invitado</button>
+
+  <button class="btnPrincipal colorUsuario" id="3" (click)="Ingresar($event)">Usuario</button>
+
+  <button class="btnPrincipal colorAnonimo" id="4" (click)="Ingresar($event)">Anónimo</button>
+
+  <button class="btnPrincipal colorTester" id="5" (click)="Ingresar($event)">Tester</button>
+
+</ion-content>

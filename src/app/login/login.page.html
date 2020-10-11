@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login" padding >
+  
+ 
+    <!-- <ion-card-header style="text-align: center;">Carga Crédito</ion-card-header> -->
+    
+    <form class="form" [formGroup] = "loginForm" (ngSubmit)="submit()">
+      <ion-list> 
+    <ion-item>
+      <ion-label>Usuario: </ion-label>
+      <ion-input [(ngModel)]= "user.email" formControlName="email" name="email" type="text"></ion-input>
+    </ion-item>
+    <div *ngFor= "let error of errorMessages.email">
+      <ng-container *ngIf= "email.hasError(error.type) && (email.dirty || email.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+    
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input [(ngModel)]= "user.clave" formControlName="clave" name="clave" type="password"></ion-input>
+    </ion-item>
+    <div *ngFor= "let error of errorMessages.clave">
+      <ng-container *ngIf= "clave.hasError(error.type) && (clave.dirty || clave.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+
+    <ion-button color="light" style="margin-left: 35%;" (click)="Ingresar()" [disabled] = "loginForm.invalid" >Ingresar</ion-button><br><br>
+    <ion-router-link style="margin-left: 10px;" [routerLink]="['/registro']"  class="registro">Registrarse</ion-router-link>
+    <ion-router-link style="margin-left: 100px;"  [routerLink]="['/test-usuario']"  class="registro">Cargar Usuarios</ion-router-link>
+
+
+  </ion-list>
+  </form>
+
+</ion-content>
