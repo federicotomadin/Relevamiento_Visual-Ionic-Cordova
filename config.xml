@@ -19,7 +19,6 @@
     <preference name="ShowSplashScreen" value="false" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="none" />
-
     <preference name="AndroidXEnabled" value="true" />
     <preference name="GradlePluginKotlinEnabled" value="true" />
     <preference name="SplashScleenDelay" value="0" />
@@ -27,9 +26,9 @@
     <preference name="LottieFullScreen" value="true" />
     <preference name="LottieEnableHardwareAcceleration" value="true" />
     <preference name="LottieLoopAnimation" value="true" />
-    <preference name="LottieFadeOutDuration" value="3000" />
-    <preference name="LottieHideTimeout" value="3000" />
-    <preference name="LottieBackgroundColor" value="#000000" />
+    <preference name="LottieFadeOutDuration" value="2000" />
+    <preference name="LottieHideTimeout" value="2000" />
+    <preference name="LottieBackgroundColor" value="#38c172" />
     <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
             <application android:networkSecurityConfig="@xml/network_security_config" />

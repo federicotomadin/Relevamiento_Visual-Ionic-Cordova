@@ -36,7 +36,10 @@ export class AppComponent {
         this.lottieSplashScreen.hide();  
       },3000)
      
-      // timer(5000).subscribe(() => this.showSplash = false);    
+      setTimeout(() => {
+        this.iniciarlizarAudios()
+      },2000)
+
     });
   }
 
